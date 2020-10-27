@@ -15,11 +15,8 @@ pipeline {
          stage('build') {
             steps {
                 echo 'code building'
-                sh 'mvn clean'
-                sh 'mvn compile'
-                sh 'mvn test'
-                sh 'mvn package'
-                sh 'mvn install'
+                bat 'mvn clean'
+                bat 'mvn install'
             }
         }
     }
